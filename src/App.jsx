@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { ShoppingCart, Bookmark, Terminal } from 'lucide-react'
-
+import logoxd from './assets/logosecutee.png'
+import polerapy from './assets/polerajs.png'
+import polerajs from './assets/polerapy.png'
+import whatsapp from './assets/whatsapp.png'
 function App() {
   const [email, setEmail] = useState('')
 
@@ -11,18 +14,19 @@ function App() {
   }
 
   const products = [
-    { id: 1, name: "Polera Hacker Elite", price: 29.99, description: "Algodón negro con diseño de código" },
-    { id: 2, name: "Sudadera Cyberpunk", price: 49.99, description: "Diseño futurista con LEDs integrados" },
-    { id: 3, name: "Camiseta Código Binario", price: 24.99, description: "Patrón de 0s y 1s en verde fosforescente" },
-    { id: 4, name: "Hoodie Anonymus", price: 54.99, description: "Con capucha y máscara estampada" },
-    { id: 5, name: "Tank Top Hacker Girl", price: 19.99, description: "Diseño empoderado para programadoras" },
-    { id: 6, name: "Polera Firewall", price: 34.99, description: "Estampado de muro de fuego digital" },
+    { id: 1, name: "Polera Hacker Elite", price: 29.99, description: "Algodón negro con diseño de código", img: polerapy },
+    { id: 2, name: "Sudadera Cyberpunk", price: 49.99, description: "Diseño futurista con LEDs integrados", img: polerapy },
+    { id: 3, name: "Camiseta Código Binario", price: 24.99, description: "Patrón de 0s y 1s en verde fosforescente", img: polerapy },
+    { id: 4, name: "Hoodie Anonymus", price: 54.99, description: "Con capucha y máscara estampada", img: polerapy },
+    { id: 5, name: "Tank Top Hacker Girl", price: 19.99, description: "Diseño empoderado para programadoras", img: polerapy },
+    { id: 6, name: "Polera Firewall", price: 34.99, description: "Estampado de muro de fuego digital", img: polerapy },
   ]
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-green-500">
       <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Terminal className="h-6 w-6 mr-2" />
+
+        <img src={logoxd} alt="" className='w-16 pt-2' />
         <span className="font-bold">SECUTEE</span>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <button className="text-green-500 hover:text-green-400">Catálogo</button>
@@ -56,6 +60,7 @@ function App() {
                     <div className="text-green-300 text-5xl font-bold opacity-20">
                       {product.name[0].toUpperCase()}
                     </div>
+                    <img src={product.img} alt="" className='w-120 ' />
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
@@ -95,6 +100,16 @@ function App() {
                   className="w-full px-3 py-2 bg-green-900/20 border border-green-500 text-green-500 placeholder-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
+                <a
+                  href="https://wa.me/+51930445060?text=Hola%2C%20me%20gustaría%20recibir%20más%20información" // Enlace con tu número y mensaje predeterminado
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600 transition duration-300 ease-in-out"
+                >
+                  <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
+                  Más info
+                </a>
+
                 <button type="submit" className="w-full bg-green-500 text-black hover:bg-green-400 px-4 py-2 rounded-md">
                   Suscribirse
                 </button>
@@ -104,7 +119,7 @@ function App() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-green-900">
-        <p className="text-xs text-green-500">© 2024 HackerWear. Todos los derechos reservados.</p>
+        <p className="text-xs text-green-500">© 2024 Secutee. Todos los derechos reservados.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <button className="text-xs text-green-500 hover:text-green-400">Términos de Servicio</button>
           <button className="text-xs text-green-500 hover:text-green-400">Política de Privacidad</button>
