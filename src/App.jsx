@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { ShoppingCart, Bookmark, Terminal } from 'lucide-react'
 import logoxd from './assets/logosecutee.png'
-import polerapy from './assets/polerajs.png'
-import polerajs from './assets/polerapy.png'
+import js from './assets/polera-js.png'
+import python from './assets/polera-py.png'
+import github from './assets/polera-github.png'
+import html from './assets/polera-html.png'
+import nestjs from './assets/polera-nestjs.png'
+import java from './assets/polera-java.png'
 import whatsapp from './assets/whatsapp.png'
 function App() {
   const [email, setEmail] = useState('')
@@ -14,12 +18,12 @@ function App() {
   }
 
   const products = [
-    { id: 1, name: "Polera Hacker Elite", price: 29.99, description: "Algodón negro con diseño de código", img: polerapy },
-    { id: 2, name: "Sudadera Cyberpunk", price: 49.99, description: "Diseño futurista con LEDs integrados", img: polerapy },
-    { id: 3, name: "Camiseta Código Binario", price: 24.99, description: "Patrón de 0s y 1s en verde fosforescente", img: polerapy },
-    { id: 4, name: "Hoodie Anonymus", price: 54.99, description: "Con capucha y máscara estampada", img: polerapy },
-    { id: 5, name: "Tank Top Hacker Girl", price: 19.99, description: "Diseño empoderado para programadoras", img: polerapy },
-    { id: 6, name: "Polera Firewall", price: 34.99, description: "Estampado de muro de fuego digital", img: polerapy },
+    { id: 1, name: "Polera Github", price: 70, description: "Algodón negro con diseño de código", img: github },
+    { id: 2, name: "Polera NestJs", price: 70, description: "Diseño futurista con LEDs integrados", img: nestjs },
+    { id: 3, name: "Polera Python", price: 70, description: "Patrón de 0s y 1s en verde fosforescente", img: python },
+    { id: 4, name: "Polera del poderoso Html", price: 70, description: "Con capucha y máscara estampada", img: html },
+    { id: 5, name: "Polera Java", price: 70, description: "Diseño empoderado para programadoras", img: java },
+    { id: 6, name: "Polera JavaScript", price: 70, description: "Estampado de muro de fuego digital", img: js },
   ]
 
   return (
@@ -45,7 +49,7 @@ function App() {
                 Descubre nuestra colección de poleras inspiradas en la cultura hacker. Código, seguridad y estilo en cada diseño.
               </p>
               <button className="bg-green-500 text-black hover:bg-green-400 px-4 py-2 rounded-md flex items-center">
-                Ver Catálogo <ShoppingCart className="ml-2 h-4 w-4" />
+                Ver Poleras <ShoppingCart className="ml-2 h-4 w-4" />
               </button>
             </div>
           </div>
@@ -66,7 +70,7 @@ function App() {
                     <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
                     <p className="text-green-400 mb-2">{product.description}</p>
                     <div className="flex justify-between items-center mb-4">
-                      <span className="text-2xl font-bold">${product.price.toFixed(2)}</span>
+                      <span className="text-2xl font-bold">S/{product.price.toFixed(2)}</span>
                       <div className="flex space-x-2">
                         <button className="bg-green-500 text-black hover:bg-green-400 px-2 py-1 rounded-md flex items-center text-sm">
                           <ShoppingCart className="h-4 w-4 mr-2" />
@@ -87,32 +91,21 @@ function App() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
-              <h2 className="text-2xl font-bold">Únete a la Comunidad Hacker</h2>
+              <h2 className="text-2xl font-bold">Únete a la Comunidad</h2>
               <p className="mx-auto max-w-[600px] text-green-400">
-                Suscríbete para recibir las últimas novedades, ofertas exclusivas y trucos de estilo hacker.
+                Escribenos al Whatsapp para mas información.
               </p>
               <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-2">
-                <input
-                  type="email"
-                  placeholder="tu@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-3 py-2 bg-green-900/20 border border-green-500 text-green-500 placeholder-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                  required
-                />
+                
                 <a
                   href="https://wa.me/+51930445060?text=Hola%2C%20me%20gustaría%20recibir%20más%20información" // Enlace con tu número y mensaje predeterminado
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600 transition duration-300 ease-in-out"
+                  className="flex items-center bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center"
                 >
                   <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
                   Más info
                 </a>
-
-                <button type="submit" className="w-full bg-green-500 text-black hover:bg-green-400 px-4 py-2 rounded-md">
-                  Suscribirse
-                </button>
               </form>
             </div>
           </div>
