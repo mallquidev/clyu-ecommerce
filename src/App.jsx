@@ -9,21 +9,14 @@ import nestjs from './assets/polera-nestjs.png'
 import java from './assets/polera-java.png'
 import whatsapp from './assets/whatsapp.png'
 function App() {
-  const [email, setEmail] = useState('')
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Email subscrito:', email)
-    setEmail('')
-  }
 
   const products = [
-    { id: 1, name: "Polera Github", price: 70, description: "Algodón negro con diseño de código", img: github },
-    { id: 2, name: "Polera NestJs", price: 70, description: "Diseño futurista con LEDs integrados", img: nestjs },
-    { id: 3, name: "Polera Python", price: 70, description: "Patrón de 0s y 1s en verde fosforescente", img: python },
-    { id: 4, name: "Polera del poderoso Html", price: 70, description: "Con capucha y máscara estampada", img: html },
-    { id: 5, name: "Polera Java", price: 70, description: "Diseño empoderado para programadoras", img: java },
-    { id: 6, name: "Polera JavaScript", price: 70, description: "Estampado de muro de fuego digital", img: js },
+    { id: 1, name: "Polera Github", price: 18.99, description: "Polera negra L/S con diseño GITHUB", img: github },
+    { id: 2, name: "Polera NestJs", price: 18.99, description: "Polera negra L/S con diseño de Framework", img: nestjs },
+    { id: 3, name: "Polera Python", price: 18.99, description: "Polera negra L/S con diseño de Lenguaje", img: python },
+    { id: 4, name: "Polera del poderoso Html", price: 18.99, description: "Polera negra L/S con diseño de Lenguaje de estructura", img: html },
+    { id: 5, name: "Polera Java", price: 18.99, description: "Polera negra L/S con diseño de Lenguaje", img: java },
+    { id: 6, name: "Polera JavaScript", price: 18.99, description: "Polera negra L/S con diseño de Lenguaje", img: js },
   ]
 
   return (
@@ -70,7 +63,7 @@ function App() {
                     <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
                     <p className="text-green-400 mb-2">{product.description}</p>
                     <div className="flex justify-between items-center mb-4">
-                      <span className="text-2xl font-bold">S/{product.price.toFixed(2)}</span>
+                      <span className="text-2xl font-bold">${product.price.toFixed(2)}</span>
                       <div className="flex space-x-2">
                         <button className="bg-green-500 text-black hover:bg-green-400 px-2 py-1 rounded-md flex items-center text-sm">
                           <ShoppingCart className="h-4 w-4 mr-2" />
@@ -95,7 +88,7 @@ function App() {
               <p className="mx-auto max-w-[600px] text-green-400">
                 Escribenos al Whatsapp para mas información.
               </p>
-              <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-2">
+              
                 
                 <a
                   href="https://wa.me/+51930445060?text=Hola%2C%20me%20gustaría%20recibir%20más%20información" // Enlace con tu número y mensaje predeterminado
@@ -106,7 +99,7 @@ function App() {
                   <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
                   Más info
                 </a>
-              </form>
+              
             </div>
           </div>
         </section>
