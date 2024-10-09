@@ -39,7 +39,7 @@ function App() {
                 Hackea tu Estilo
               </h1>
               <p className="mx-auto max-w-[700px] text-green-400 md:text-xl">
-                Descubre nuestra colección de poleras inspiradas en la cultura hacker. Código, seguridad y estilo en cada diseño.
+                Descubre nuestra colección de poleras inspiradas en la informatica. Lenguajes, Frameworks y estilo en cada diseño.
               </p>
               <button className="bg-green-500 text-black hover:bg-green-400 px-4 py-2 rounded-md flex items-center">
                 Ver Poleras <ShoppingCart className="ml-2 h-4 w-4" />
