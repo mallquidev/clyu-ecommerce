@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ShoppingCart, Bookmark, Terminal } from 'lucide-react'
+import { ShoppingCart, Bookmark } from 'lucide-react'
 import logoxd from './assets/logosecutee.png'
 import js from './assets/polera-js.png'
 import python from './assets/polera-py.png'
@@ -54,9 +54,7 @@ function App() {
               {products.map((product) => (
                 <div key={product.id} className="bg-black border border-green-500 rounded-lg overflow-hidden shadow-lg">
                   <div className="aspect-w-3 aspect-h-4 bg-green-800/30 flex items-center justify-center">
-                    <div className="text-green-300 text-5xl font-bold opacity-20">
-                      {product.name[0].toUpperCase()}
-                    </div>
+
                     <img src={product.img} alt="" className='w-120 ' />
                   </div>
                   <div className="p-4">
@@ -65,14 +63,16 @@ function App() {
                     <div className="flex justify-between items-center mb-4">
                       <span className="text-2xl font-bold">${product.price.toFixed(2)}</span>
                       <div className="flex space-x-2">
-                        <button className="bg-green-500 text-black hover:bg-green-400 px-2 py-1 rounded-md flex items-center text-sm">
-                          <ShoppingCart className="h-4 w-4 mr-2" />
-                          Agregar
-                        </button>
-                        <button className="border border-green-500 text-green-500 hover:bg-green-500 hover:text-black px-2 py-1 rounded-md flex items-center text-sm">
-                          <Bookmark className="h-4 w-4 mr-2" />
+                        
+                        <a
+                          href="https://wa.me/+51930445060?text=Hola%2C%20me%20gustaría%20recibir%20más%20información" // Enlace con tu número y mensaje predeterminado
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center"
+                        >
+                          <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
                           Reservar
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -88,18 +88,18 @@ function App() {
               <p className="mx-auto max-w-[600px] text-green-400">
                 Escribenos al Whatsapp para mas información.
               </p>
-              
-                
-                <a
-                  href="https://wa.me/+51930445060?text=Hola%2C%20me%20gustaría%20recibir%20más%20información" // Enlace con tu número y mensaje predeterminado
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center"
-                >
-                  <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
-                  Más info
-                </a>
-              
+
+
+              <a
+                href="https://wa.me/+51930445060?text=Hola%2C%20me%20gustaría%20recibir%20más%20información" // Enlace con tu número y mensaje predeterminado
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center"
+              >
+                <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
+                Más info
+              </a>
+
             </div>
           </div>
         </section>
