@@ -26,7 +26,7 @@ function App() {
         <img src={logoxd} alt="" className='w-16 pt-2' />
         <span className="font-bold">SECUTEE</span>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <button className="text-green-500 hover:text-green-400">Catálogo</button>
+          <button className="text-green-500 hover:text-green-400">Producto</button>
           <button className="text-green-500 hover:text-green-400">Nosotros</button>
           <button className="text-green-500 hover:text-green-400">Contacto</button>
         </nav>
@@ -47,13 +47,13 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-green-900/10">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-green-500">
           <div className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-8">Nuestro Catálogo</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-3">
+            <h2 className="text-3xl font-bold text-center mb-8 text-white sm:text-4xl md:text-5xl lg:text-6xl/none">Nuestro Producto</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
               {products.map((product) => (
-                <div key={product.id} className="bg-black border border-green-500 rounded-lg overflow-hidden shadow-lg p-4">
-                  <div className="aspect-w-3 aspect-h-4 bg-green-800/30 flex items-center justify-center">
+                <div key={product.id} className="bg-black border border-green-500 rounded-2xl overflow-hidden shadow-lg">
+                  <div className="aspect-w-3 aspect-h-4 bg-green-500/50 flex items-center justify-center">
                     <img src={product.img} alt="" className="w-120" />
                   </div>
                   <div className="p-4">
