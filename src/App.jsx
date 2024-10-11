@@ -11,12 +11,12 @@ import whatsapp from './assets/whatsapp.png'
 function App() {
 
   const products = [
-    { id: 1, name: "Polera Github", price: 18.99, description: "Polera negra L/S con diseño GITHUB", img: github },
-    { id: 2, name: "Polera NestJs", price: 18.99, description: "Polera negra L/S con diseño de Framework", img: nestjs },
-    { id: 3, name: "Polera Python", price: 18.99, description: "Polera negra L/S con diseño de Lenguaje", img: python },
-    { id: 4, name: "Polera del poderoso Html", price: 18.99, description: "Polera negra L/S con HTML", img: html },
-    { id: 5, name: "Polera Java", price: 18.99, description: "Polera negra L/S con diseño de Lenguaje", img: java },
-    { id: 6, name: "Polera JavaScript", price: 18.99, description: "Polera negra L/S con diseño de Lenguaje", img: js },
+    { id: 1, name: "Polera Github", price: 18.99, description: "Polera negra L/M con diseño GITHUB", img: github },
+    { id: 2, name: "Polera NestJs", price: 18.99, description: "Polera negra L/M con diseño de Framework", img: nestjs },
+    { id: 3, name: "Polera Python", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: python },
+    { id: 4, name: "Polera del poderoso Html", price: 18.99, description: "Polera negra L/M con HTML", img: html },
+    { id: 5, name: "Polera Java", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: java },
+    { id: 6, name: "Polera JavaScript", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: js },
   ]
 
   return (
