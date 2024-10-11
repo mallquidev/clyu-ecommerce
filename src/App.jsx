@@ -64,13 +64,13 @@ function App() {
                       <div className="flex space-x-2 mt-4 sm:mt-0">
                         <label>
                           <input className="sr-only peer" name="size" type="radio" value="S" />
-                          <div className="w-9 h-9 border-2 border-green-500 rounded-lg flex items-center justify-center text-white bg-green-700 peer-checked:font-semibold peer-checked:bg-green-500 peer-checked:border-green-500">
+                          <div className="w-9 h-9 border-2 border-green-500 rounded-lg flex items-center justify-center text-white ">
                             S
                           </div>
                         </label>
                         <label>
-                          <input className="sr-only peer" name="size" type="radio" value="M" />
-                          <div className="w-9 h-9 border-2 border-green-500 rounded-lg flex items-center justify-center text-green-500">
+                          <input className="sr-only peer" type="radio" autocomplete="off" />
+                          <div className="w-9 h-9 border-2 border-green-500 rounded-lg flex items-center justify-center text-white bg-green-700 peer-checked:font-semibold peer-checked:bg-green-500 peer-checked:border-green-500">
                             M
                           </div>
                         </label>
