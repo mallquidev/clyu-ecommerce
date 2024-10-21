@@ -2,21 +2,31 @@ import React, { useState } from 'react'
 import { ShoppingCart, Bookmark } from 'lucide-react'
 import logoxd from './assets/logosecutee.png'
 import js from './assets/polera-js.png'
+import jsback from './assets/js-back.png'
 import python from './assets/polera-py.png'
+import pyback from './assets/py-back.png'
 import github from './assets/polera-github.png'
+import githuback from './assets/github-back.png'
 import html from './assets/polera-html.png'
+import htmlback from './assets/html-back.png'
 import nestjs from './assets/polera-nestjs.png'
+import nestback from './assets/nest-back.png'
 import java from './assets/polera-java.png'
+import javaback from './assets/java-back.png'
 import whatsapp from './assets/whatsapp.png'
+
+import ImageGallery from 'react-image-gallery'
+import "react-image-gallery/styles/css/image-gallery.css";
+
 function App() {
 
   const products = [
-    { id: 1, name: "Polera Github", price: 18.99, description: "Polera negra L/M con diseño GITHUB", img: github },
-    { id: 2, name: "Polera NestJs", price: 18.99, description: "Polera negra L/M con diseño de Framework", img: nestjs },
-    { id: 3, name: "Polera Python", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: python },
-    { id: 4, name: "Polera del poderoso Html", price: 18.99, description: "Polera negra L/M con HTML", img: html },
-    { id: 5, name: "Polera Java", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: java },
-    { id: 6, name: "Polera JavaScript", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: js },
+    { id: 1, name: "Polera Github", price: 18.99, description: "Polera negra L/M con diseño GITHUB", img: [github, githuback] },
+    { id: 2, name: "Polera NestJs", price: 18.99, description: "Polera negra L/M con diseño de Framework", img: [nestjs, nestback] },
+    { id: 3, name: "Polera Python", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: [python, pyback] },
+    { id: 4, name: "Polera del poderoso Html", price: 18.99, description: "Polera negra L/M con HTML", img: [html, htmlback] },
+    { id: 5, name: "Polera Java", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: [java, javaback] },
+    { id: 6, name: "Polera JavaScript", price: 18.99, description: "Polera negra L/M con diseño de Lenguaje", img: [js, jsback] },
   ]
 
   return (
@@ -54,7 +64,7 @@ function App() {
               {products.map((product) => (
                 <div key={product.id} className="bg-[#ffff] border rounded-2xl overflow-hidden shadow-lg">
                   <div className="aspect-w-3 aspect-h-4 bg-[#EEF0F4] flex items-center justify-center">
-                    <img src={product.img} alt="" className="w-120" />
+                    <ImageGallery items={product.img.map(image => ({original: image}))} showPlayButton={false} showThumbnail={false} showBullets={true} showNav={false}/>
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-lg mb-2 text-[#124150]">{product.name}</h3>
