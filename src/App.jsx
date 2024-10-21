@@ -64,7 +64,7 @@ function App() {
               {products.map((product) => (
                 <div key={product.id} className="bg-[#ffff] border rounded-2xl overflow-hidden shadow-lg">
                   <div className="aspect-w-3 aspect-h-4 bg-[#EEF0F4] flex items-center justify-center">
-                    <ImageGallery items={product.img.map(image => ({original: image}))} showPlayButton={false} showThumbnail={false} showBullets={true} showNav={false}/>
+                    <ImageGallery items={product.img.map(image => ({original: image}))} showPlayButton={false} showThumbnail={false} showBullets={true} showNav={false} showFullscreenButton={false}/>
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-lg mb-2 text-[#124150]">{product.name}</h3>
