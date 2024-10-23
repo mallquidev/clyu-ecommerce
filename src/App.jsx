@@ -102,12 +102,12 @@ function App() {
                         S
                       </label>
                       <label
-                        className='p-2  font-semibold hover:bg-green-700 hover:text-white duration-300 ease-out  text-green-700 w-10 rounded-md flex items-center justify-center '
+                        className='p-2  font-semibold  duration-300 ease-out  text-green-700 w-10 rounded-md flex items-center justify-center '
                         htmlFor="">
                         M
                       </label>
                       <label
-                        className='p-2  font-semibold hover:bg-green-700 hover:text-white duration-300 ease-out  text-green-700 w-10 rounded-md flex items-center justify-center '
+                        className='p-2  font-semibold  duration-300 ease-out  text-green-700 w-10 rounded-md flex items-center justify-center '
                         htmlFor="">
                         L
                       </label>
