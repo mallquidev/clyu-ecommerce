@@ -91,7 +91,7 @@ function App() {
                       <p className="mb-2 text-zinc-500">{product.description}</p>
                       <div className="flex items-end ">
                         <span className="relative text-lg font-semibold text-[#11181c]">${product.price.toFixed(2)}</span>
-                        <span className="relative line-through font-semibold text-[#21A0A] ml-3">$80.00</span>
+                        <span className="relative line-through font-semibold text-[#21A0A] ml-3">$21.23</span>
                         <span className="relative font-normal ml-3 text-green-500">23% off</span>
                       </div>
                     </div>
