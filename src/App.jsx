@@ -35,7 +35,7 @@ function App() {
 
         <img src={logoxd} alt="" className='w-16 pt-2 text-black' />
         <span className="font-bold text-[#124150]">SECUTEE</span>
-        <nav className="ml-auto flex gap-4 sm:gap-6 z-[999]">
+        <nav className="ml-auto flex gap-4 sm:gap-6">
           <a
             className="text-[#007644] hover:text-green-400 cursor-pointer"
             onClick={() => {
