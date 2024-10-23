@@ -13,7 +13,7 @@ import nestjs from './assets/polera-nestjs.png'
 import nestback from './assets/nest-back.png'
 import java from './assets/polera-java.png'
 import javaback from './assets/java-back.png'
-import whatsapp from './assets/whatsap.svg'
+import whatsappimport whatsapp from './assets/whatsap.svg'
 
 import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -21,12 +21,12 @@ import "react-image-gallery/styles/css/image-gallery.css";
 function App() {
 
   const products = [
-    { id: 1, name: "Polera Github", price: 17.25, description: "Polera negra en talla M/L con diseño GITHUB", img: [github, githuback] },
-    { id: 2, name: "Polera NestJs", price: 17.25, description: "Polera negra en talla M/L con diseño de Framework", img: [nestjs, nestback] },
-    { id: 3, name: "Polera Python", price: 17.25, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [python, pyback] },
-    { id: 4, name: "Polera del poderoso Html", price: 17.25, description: "Polera negra en talla M/L con HTML", img: [html, htmlback] },
-    { id: 5, name: "Polera Java", price: 17.25, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [java, javaback] },
-    { id: 6, name: "Polera JavaScript", price: 17.25, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [js, jsback] },
+    { id: 1, name: "Polera Gi8hub", price: 18.99, description: "Polera negra en talla M/L con diseño GITHUB", img: [github, githuback] },
+    { id: 2, name: "Polera NestJs", price: 18.99, description: "Polera negra en talla M/L con diseño de Framework", img: [nestjs, nestback] },
+    { id: 3, name: "Polera Python", price: 18.99, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [python, pyback] },
+    { id: 4, name: "Polera del poderoso Html", price: 18.99, description: "Polera negra en talla M/L con HTML", img: [html, htmlback] },
+    { id: 5, name: "Polera Java", price: 18.99, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [java, javaback] },
+    { id: 6, name: "Polera JavaScript", price: 18.99, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [js, jsback] },
   ]
   return (
     <div className="flex flex-col min-h-screen bg-white text-green-500">
@@ -92,7 +92,7 @@ function App() {
                       <p className="mb-2 text-zinc-500">{product.description}</p>
                       <div className="flex items-end ">
                         <span className="relative text-lg font-semibold text-[#11181c]">${product.price.toFixed(2)}</span>
-                        <span className="relative line-through font-semibold text-[#A1A1AA] ml-3">$21.23</span>
+                        <span className="relative line-through font-semibold text-[#21A0A] ml-3">$80.00</span>
                         <span className="relative font-normal ml-3 text-green-500">23% off</span>
                       </div>
                     </div>
@@ -124,10 +124,7 @@ function App() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 mx-auto">
+x-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-2xl font-bold text-[#124150]">Únete a la Comunidad</h2>
               <p className="mx-auto max-w-[600px] text-[#124150]">
