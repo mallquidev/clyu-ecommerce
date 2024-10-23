@@ -13,7 +13,7 @@ import nestjs from './assets/polera-nestjs.png'
 import nestback from './assets/nest-back.png'
 import java from './assets/polera-java.png'
 import javaback from './assets/java-back.png'
-import whatsapp from './assets/whatsapp.png'
+import whatsapp from './assets/whatsap.svg'
 
 import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -28,7 +28,6 @@ function App() {
     { id: 5, name: "Polera Java", price: 18.99, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [java, javaback] },
     { id: 6, name: "Polera JavaScript", price: 18.99, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [js, jsback] },
   ]
-
   return (
     <div className="flex flex-col min-h-screen bg-white text-green-500">
       <header className="px-4 lg:px-6 h-14 flex items-center flex-wrap">
@@ -81,46 +80,41 @@ function App() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-[#EEF0F4]">
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8 sm:text-4xl md:text-5xl lg:text-6xl/none text-[#124150]" id='producto'>Nuestro Producto</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5" >
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 p-5" >
               {products.map((product) => (
-                <div key={product.id} className="bg-[#ffff] border rounded-2xl overflow-hidden shadow-lg">
-                  <div className="aspect-w-3 aspect-h-4 bg-[#EEF0F4] flex items-center justify-center">
-                    <ImageGallery items={product.img.map(image => ({ original: image }))} showPlayButton={false} showThumbnail={false} showBullets={true} showNav={false} showFullscreenButton={false} />
+                <div className="bg-[#ffff] flex flex-col md:flex-row rounded-2xl h-[600px] md:h-auto shadow-sm">
+                  <div className="aspect-w-3 aspect-h-4 p-5 bg-green-700 rounded-2xl flex items-center justify-center">
+                    <ImageGallery additionalClass='w-72 h-72 object-contain' items={product.img.map(image => ({ original: image }))} showPlayButton={false} showThumbnail={false} showBullets={true} showNav={false} showFullscreenButton={false} />
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-lg mb-2 text-[#124150]">{product.name}</h3>
-                    <p className="mb-2 text-[#124150]">{product.description}</p>
-                    <div className="flex flex-wrap justify-between items-center mb-4">
-                      <span className="text-2xl font-bold text-[#124150]">${product.price.toFixed(2)}</span>
-                      <div className="flex space-x-2 mt-4 sm:mt-0">
-
-                        <label>
-                          <input className="sr-only peer" type="radio" autocomplete="off" />
-                          <div className="w-9 h-9 border-2 rounded-lg flex items-center justify-center text-white bg-[#007644] peer-checked:font-semibold">
-                            M
-                          </div>
-                        </label>
-                        <label>
-                          <input className="sr-only peer" name="size" type="radio" value="L" checked />
-                          <div className="w-9 h-9 border-2 rounded-lg flex items-center justify-center text-white bg-[#007644] peer-checked:font-semibold">
-                            L
-                          </div>
-                        </label>
-                        <label>
-                          <input className="sr-only peer" name="size" type="radio" value="S" />
-                          <div className="w-9 h-9 border-2 border-green-500 rounded-lg flex items-center justify-center text-green-600 ">
-                            S
-                          </div>
-                        </label>
+                  <div className="p-4 h-40 flex flex-col gap-5 ">
+                    <div>
+                      <h3 className="font-bold text-2xl  mb-2 text-zinc-800">{product.name}</h3>
+                      <p className="mb-2 text-zinc-500">{product.description}</p>
+                      <div className="flex items-end ">
+                        <span className="relative text-lg font-semibold text-[#11181c]">${product.price.toFixed(2)}</span>
+                        <span className="relative line-through font-semibold text-[#A1A1AA] ml-3">$80.00</span>
+                        <span className="relative font-normal ml-3 text-green-500">23% off</span>
                       </div>
                     </div>
+                    <div className='flex items-center gap-2 text-white '>
+                      <label title='No disponible'
+                        className='p-2  opacity-45 bg-zinc-500 w-10 rounded-md flex items-center justify-center ' htmlFor="">
+                        S
+                      </label>
+                      <label
+                        className='p-2  font-semibold hover:bg-green-700 hover:text-white duration-300 ease-out  text-green-700 w-10 rounded-md flex items-center justify-center '
+                        htmlFor="">
+                        M
+                      </label>
+                      <label
+                        className='p-2  font-semibold hover:bg-green-700 hover:text-white duration-300 ease-out  text-green-700 w-10 rounded-md flex items-center justify-center '
+                        htmlFor="">
+                        L
+                      </label>
+                    </div>
                     <div className="flex space-x-4 mb-6 text-sm">
-                      <a
-                        href={`https://wa.me/+51930445060?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20${encodeURIComponent(product.name)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center bg-green-700 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center w-full sm:w-auto"
-                      >
+                      <a href={''} target="_blank" rel="noopener noreferrer"
+                        className="flex items-center bg-green-700 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center w-full sm:w-auto">
                         <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
                         Reservar
                       </a>
@@ -130,8 +124,6 @@ function App() {
                 </div>
               ))}
             </div>
-
-
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
