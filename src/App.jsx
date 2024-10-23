@@ -21,12 +21,12 @@ import "react-image-gallery/styles/css/image-gallery.css";
 function App() {
 
   const products = [
-    { id: 1, name: "Polera Github", price: 18.99, description: "Polera negra en talla M/L con diseño GITHUB", img: [github, githuback] },
-    { id: 2, name: "Polera NestJs", price: 18.99, description: "Polera negra en talla M/L con diseño de Framework", img: [nestjs, nestback] },
-    { id: 3, name: "Polera Python", price: 18.99, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [python, pyback] },
-    { id: 4, name: "Polera del poderoso Html", price: 18.99, description: "Polera negra en talla M/L con HTML", img: [html, htmlback] },
-    { id: 5, name: "Polera Java", price: 18.99, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [java, javaback] },
-    { id: 6, name: "Polera JavaScript", price: 18.99, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [js, jsback] },
+    { id: 1, name: "Polera Github", price: 17.25, description: "Polera negra en talla M/L con diseño GITHUB", img: [github, githuback] },
+    { id: 2, name: "Polera NestJs", price: 17.25, description: "Polera negra en talla M/L con diseño de Framework", img: [nestjs, nestback] },
+    { id: 3, name: "Polera Python", price: 17.25, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [python, pyback] },
+    { id: 4, name: "Polera del poderoso Html", price: 17.25, description: "Polera negra en talla M/L con HTML", img: [html, htmlback] },
+    { id: 5, name: "Polera Java", price: 17.25, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [java, javaback] },
+    { id: 6, name: "Polera JavaScript", price: 17.25, description: "Polera negra en talla M/L con diseño de Lenguaje", img: [js, jsback] },
   ]
   return (
     <div className="flex flex-col min-h-screen bg-white text-green-500">
@@ -92,7 +92,7 @@ function App() {
                       <p className="mb-2 text-zinc-500">{product.description}</p>
                       <div className="flex items-end ">
                         <span className="relative text-lg font-semibold text-[#11181c]">${product.price.toFixed(2)}</span>
-                        <span className="relative line-through font-semibold text-[#A1A1AA] ml-3">$80.00</span>
+                        <span className="relative line-through font-semibold text-[#A1A1AA] ml-3">$21.23</span>
                         <span className="relative font-normal ml-3 text-green-500">23% off</span>
                       </div>
                     </div>
