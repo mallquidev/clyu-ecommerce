@@ -13,8 +13,7 @@ import nestjs from './assets/polera-nestjs.png'
 import nestback from './assets/nest-back.png'
 import java from './assets/polera-java.png'
 import javaback from './assets/java-back.png'
-import whatsappimport whatsapp from './assets/whatsap.svg'
-
+import whatsap from './assets/whatsap.svg'
 import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -113,18 +112,16 @@ function App() {
                       </label>
                     </div>
                     <div className="flex space-x-4 mb-6 text-sm">
-                      <a href={https://wa.me/+51930445060?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20${encodeURIComponent(product.name)}} target="_blank" rel="noopener noreferrer"
-                        className="flex items-center bg-green-700 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center w-full sm:w-auto">
-                        <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
+                      <a target='_blank' rel="noopener noreferrer" className="flex items-center bg-green-700 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center w-full sm:w-auto" href={`https://wa.me/+51930445060?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20${encodeURIComponent(product.name)}`}>
+                        <img src={whatsap} alt="WhatsApp" className="w-6 h-6 mr-2" />
                         Reservar
                       </a>
-
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-x-4 md:px-6 mx-auto">
+
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-2xl font-bold text-[#124150]">Únete a la Comunidad</h2>
               <p className="mx-auto max-w-[600px] text-[#124150]">
@@ -133,12 +130,12 @@ x-4 md:px-6 mx-auto">
 
 
               <a
-                href="https://wa.me/+51930445060?text=Hola%2C%20me%20gustaría%20recibir%20más%20información" // Enlace con tu número y mensaje predeterminado
+                href="https://wa.me/+51930445060?text=Hola%2C%20me%20gustaría%20recibir%20más%20información"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center bg-green-700 text-white py-2 px-4 rounded-full hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center"
               >
-                <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
+                <img src={whatsap} alt="WhatsApp" className="w-6 h-6 mr-2" />
                 Más info
               </a>
 
@@ -153,7 +150,7 @@ x-4 md:px-6 mx-auto">
           <button className="text-xs text-[#124150] hover:text-green-400">Política de Privacidad</button>
         </nav>
       </footer>
-    </div>
+    </div >
   )
 }
 
