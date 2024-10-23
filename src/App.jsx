@@ -113,8 +113,7 @@ function App() {
                       </label>
                     </div>
                     <div className="flex space-x-4 mb-6 text-sm">
-                      <a href={https://wa.me/+51930445060?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20${encodeURIComponent(product.name)}}
- target="_blank" rel="noopener noreferrer"
+                      <a href="" target="_blank" rel="noopener noreferrer"
                         className="flex items-center bg-green-700 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 ease-in-out text-center justify-center w-full sm:w-auto">
                         <img src={whatsapp} alt="WhatsApp" className="w-6 h-6 mr-2" />
                         Reservar
